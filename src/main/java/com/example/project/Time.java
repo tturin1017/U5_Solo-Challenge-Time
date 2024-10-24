@@ -61,9 +61,9 @@ public class Time{
     }
 
     public void add(Time time2){
-        this.s+=time2.s;
-        this.m+=time2.m;
-        this.h+=time2.h;
+        s+=time2.s;
+        m+=time2.m;
+        h+=time2.h;
         if(s>59){
             s-=60;
             this.m++;
@@ -73,9 +73,23 @@ public class Time{
                 if(h>23){
                     this.h-=24;
                 }
+            }else{
+                if(h>23){
+                    this.h-=24;
+                }
+            }
+        }else{
+            if(m>59){
+                m-=60;
+                this.h++;
+                if(h>23){
+                    this.h-=24;
+                }
+            }else{
+                if(h>23){
+                    this.h-=24;
+                }
             }
         }
     }
-
-
 }

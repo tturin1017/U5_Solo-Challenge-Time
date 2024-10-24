@@ -162,6 +162,47 @@ public class TestTime {
 
         assertEquals(expectedOutput,studentOutput);
     }
+
+    @Test
+    public void testRow15(){
+        Time time4 = new Time(10,14,43);
+        String expectedOutput = "10:14:43";
+        String studentOutput = time4.info();
+
+        assertEquals(expectedOutput,studentOutput);
+    }
+
+    @Test
+    public void testRow16(){
+        Time time4 = new Time(10,14,43);
+        Time time5 = new Time(8,30,29);
+        time4.add(time5);
+        String expectedOutput = "18:45:12";
+        String studentOutput = time4.info();
+        assertEquals(expectedOutput,studentOutput);
+    }
+
+    @Test
+    public void testRow17(){
+        Time time4 = new Time(10,14,43);
+        Time time5 = new Time(8,30,29);
+        time4.add(time5);
+        String expectedOutput = "08:30:29";
+        String studentOutput = time5.info();
+        assertEquals(expectedOutput,studentOutput);
+    }
+
+    @Test
+    public void testRow18(){
+        Time time4 = new Time(10,14,43);
+        Time time5 = new Time(8,30,29);
+        Time time6 = new Time(7,20,0);
+        time4.add(time5);
+        time4.add(time6);
+        String expectedOutput = "02:05:12";
+        String studentOutput = time4.info();
+        assertEquals(expectedOutput,studentOutput);
+    }
     
     
     
